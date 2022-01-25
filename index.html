@@ -5,8 +5,249 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+
+    
+    <!-- CSS File -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/style.css">
+        <!-- JS popper file -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+
+         <!-- JavaScript Bundle File -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+        <!-- Font Awesome File -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+
+    
+
 </head>
 <body>
+    <div class="container p-2 " style="width: 35%; margin-top: 100px;">
+
+        <!-- Display -->
+        <div class="row">
+            <div class="col-lg">
+                <input type="text" readonly style="width: 100%; height: 70px;">
+            </div>
+        </div>
+
+        <!-- DEG and F-E button -->
+        <div class="row">
+            <div class="col p-0">
+               <button type="button" class="btn btn-light" style="width: 100%;">DEG</button>
+            </div>
+            <div class="col p-0">
+                <button type="button" class="btn btn-light" style="width: 100%;">F-E</button>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+                    
+        </div>
+
+
+        <!-- MC MR M+ M- MS  -->
+        <div class="row" style="text-align: center;">
+            <div class="col">
+                <button type="button" class="btn btn-light">MC</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">MR</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">M+</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">M-</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">MS</button>
+            </div>
+        </div>
+
+
+        <!-- Trigometry and funtions -->
+        <div class="row">
+            <!-- Trigonometry dropdown -->
+            <div class="col">
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/pngwing.png" width="20px" height="20px">Trigonometry
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--function Dropdown  -->
+            <div class="col">
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        &#402; function
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col"></div>
+        </div>
+
+
+        <!-- 2nd pi e C backspace -->
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-light">2<sup>nd</sup></button>
+            </div> 
+            <div class="col">
+                <button type="button" class="btn btn-light">兀</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">e</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">C</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">⌫</button>
+            </div>
+        </div>
+
+
+        <!-- x2 1/x |x| exp mod -->
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-light">x<sup>2</sup></button>
+            </div> 
+            <div class="col">
+                <button type="button" class="btn btn-light">1/x</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">|x|</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">exp</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">mod</button>
+            </div>
+        </div>
+
+        <!-- 2rootx (  )  n! division -->
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-light"><sup>2</sup><i class="fa-regular fa-square-root"></i>x</i></button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">(</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">)</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">n!</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light"><i class="fa fa-division"></i></button>
+            </div>
+        </div>
+
+
+        <!-- x suqare y  7 8 9 * -->
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-light">x<sup>y</sup></button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">7</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">8</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">9</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">*</button>
+            </div>
+        </div>
+
+        <!-- 10 square x 4 5 6 - -->
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-light">10<sup>x</sup></button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">4</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">5</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">6</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">-</button>
+            </div>
+        </div>
+
+
+        <!-- log 1 2 3 + -->
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-light">log</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">1</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">2</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">3</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">+</button>
+            </div>
+        </div>
+
+        <!-- ln +/-  0 . = -->
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-light">ln</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">+/-</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">0</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-light">.</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-primary">=</button>
+            </div> 
+        </div>
+    </div>
+
+
     
 </body>
 </html>
