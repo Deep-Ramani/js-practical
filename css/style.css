@@ -3,6 +3,9 @@
     text-align: center;
     padding: 2px;
 }
-.button{
+.btn{
     width: 100%;
+}
+.btn:hover{
+    background-color: #e7e7e7;
 }
