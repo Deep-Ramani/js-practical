@@ -1,4 +1,8 @@
-
+.container{
+    width: 30%;
+    margin-top: 20px;
+    text-align: center;
+}
 .row{
     text-align: center;
     padding: 2px;
@@ -8,4 +12,14 @@
 }
 .btn:hover{
     background-color: #e7e7e7;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.col{
+    padding: 1px;
+}
+#dropdownMenuButton{
+    font-size: 13px;
 }
