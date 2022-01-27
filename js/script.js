@@ -2,9 +2,12 @@ const screen = document.getElementById("screen");
 
 function evaluate(str) {
   
+    let newstr = "";
 
     newstr = str.replace("÷","/");
-    return str;
+   
+    
+    return newstr;
 }
 
 
