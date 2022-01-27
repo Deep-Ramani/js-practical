@@ -20,19 +20,17 @@
         <!-- Font Awesome File -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        
-    
 </head>
 <body>
+    
     <div class="container p-2 ">
 
         <!-- Display -->
         <div class="row" >
-            <div class="col-lg col-md col-sm">
-                <div id="screen" style="height: 80px; float: right; font-size: 50px;">
-                    0
+            <div class="col">
+                <div class="outputContainer">
+                    <div type="text" class="text-end" name="screen" id="screen"> </div>
                 </div>
-
-                <!-- <input type="text"  style="height:80px; width:100%; outline: none !important;"> -->
             </div>
         </div>
 
@@ -80,7 +78,7 @@
                       <img src="images/pngwing.png" width="20px" height="20px">Trigonometry
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">sin</a>
+                      <a class="dropdown-item" href="#" value="sin" onclick="sin()">sin</a>
                       <a class="dropdown-item" href="#">cos</a>
                       <a class="dropdown-item" href="#">tan</a>
                       <a class="dropdown-item" href="#">cot</a>
@@ -118,10 +116,10 @@
                 <button type="button" class="btn btn-light">e</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">C</button>
+                <button type="button" class="btn btn-light" onclick="clrscr()">C</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">⌫</button>
+                <button type="button" class="btn btn-light" onclick=backspace()>⌫</button>
             </div>
         </div>
 
@@ -162,7 +160,7 @@
                 <button type="button" class="btn btn-light">n!</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">&#xf7;</button>
+                <button type="button" class="btn btn-light" onclick="screen.innerHTML+='&div;'">&div;</button>
             </div>
         </div>
 
@@ -173,16 +171,16 @@
                 <button type="button" class="btn btn-light">x<sup>y</sup></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>7</b></button>
+                <button type="button" class="btn btn-light" id="7" onclick="screen.innerHTML+=id"><b>7</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>8</b></button>
+                <button type="button" class="btn btn-light" id="8" onclick="screen.innerHTML+=id"><b>8</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>9</b></button>
+                <button type="button" class="btn btn-light" id="9" onclick="screen.innerHTML+=id"><b>9</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">&#xd7;</button>
+                <button type="button" class="btn btn-light" id="mulbtn" onclick="screen.innerHTML+='*'">&#xd7;</button>
             </div>
         </div>
 
@@ -192,16 +190,16 @@
                 <button type="button" class="btn btn-light">10<sup>x</sup></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>4</b></button>
+                <button type="button" class="btn btn-light" id="4" onclick="screen.innerHTML+=id"><b>4</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>5</b></button>
+                <button type="button" class="btn btn-light" id="5" onclick="screen.innerHTML+=id"><b>5</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>6</b></button>
+                <button type="button" class="btn btn-light" id="6" onclick="screen.innerHTML+=id"><b>6</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">&minus;</button>
+                <button type="button" class="btn btn-light" id="subtn" onclick="screen.innerHTML+='-'">&minus;</button>
             </div>
         </div>
 
@@ -210,19 +208,19 @@
 
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light">log</button>
+                <button type="button" class="btn btn-light" >log</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>1</b></button>
+                <button type="button" class="btn btn-light" id="1" onclick="screen.innerHTML+=id"><b>1</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>2</b></button>
+                <button type="button" class="btn btn-light" id="2" onclick="screen.innerHTML+=id"><b>2</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>3</b></button>
+                <button type="button" class="btn btn-light" id="3" onclick="screen.innerHTML+=id"><b>3</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">+</button>
+                <button type="button" class="btn btn-light" onclick="screen.innerHTML+='+'">+</button>
             </div>
         </div>
 
@@ -236,18 +234,21 @@
                 <button type="button" class="btn btn-light">&#x207a;&#x2044;&#x208b;</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>0</b></button>
+                <button type="button" class="btn btn-light" id="0" onclick="screen.innerHTML+=id"><b>0</b></button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light">.</button>
             </div>
             <div class="col" style="background-color: rgba(0, 153, 255, 0.966)">
-                <button type="button" class="btn">=</button>
+                <button type="button" class="btn" id="equalto" onclick=calculate()>=</button>
             </div> 
         </div>
     </div>
 
+    <script src="js/script.js"></script>
 
-    
+
 </body>
+
+
 </html>
