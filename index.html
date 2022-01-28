@@ -78,12 +78,12 @@
                       <img src="images/pngwing.png" width="20px" height="20px">Trigonometry
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#" value="sin" onclick="sin()">sin</a>
-                      <a class="dropdown-item" href="#">cos</a>
-                      <a class="dropdown-item" href="#">tan</a>
-                      <a class="dropdown-item" href="#">cot</a>
-                      <a class="dropdown-item" href="#">cosec</a>
-                      <a class="dropdown-item" href="#">sec</a>
+                      <button class="dropdown-item">sin</a>
+                      <button class="dropdown-item">cos</button>
+                      <button class="dropdown-item">tan</button>
+                      <button class="dropdown-item">cot</button>
+                      <button class="dropdown-item">cosec</button>
+                      <button class="dropdown-item">sec</button>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,9 @@
                         &#402; function
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">demo</a>
+                      <button class="dropdown-item" onclick="round()">Round</button>
+                      <button class="dropdown-item" onclick="ceil()">Ceil</button>
+                      <button class="dropdown-item" onclick="floor()">floor</button>
                     </div>
                 </div>
             </div>
@@ -110,10 +112,10 @@
                 <button type="button" class="btn btn-light">2<sup>nd</sup></button>
             </div> 
             <div class="col">
-                <button type="button" class="btn btn-light">兀</button>
+                <button type="button" class="btn btn-light" id="mathPI" onclick="screen.innerHTML+='π'">π</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">e</button>
+                <button type="button" class="btn btn-light" id="mathE" onclick="screen.innerHTML+='e'">e</button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" onclick="clrscr()">C</button>
@@ -128,19 +130,19 @@
 
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light">x<sup>2</sup></button>
+                <button type="button" class="btn btn-light" id="sqrt" onclick="screen.innerHTML+='^2'">x<sup>2</sup></button>
             </div> 
             <div class="col">
-                <button type="button" class="btn btn-light">1/x</button>
+                <button type="button" class="btn btn-light" id="invbtn" onclick="screen.innerHTML+='1&div;'">1/x</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">|x|</button>
+                <button type="button" class="btn btn-light" id="absbtn" onclick="abs()">|x|</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">exp</button>
+                <button type="button" class="btn btn-light" onclick="exp()">exp</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">mod</button>
+                <button type="button" class="btn btn-light" id="modbtn" onclick="screen.innerHTML+='%'">mod</button>
             </div>
         </div>
 
@@ -148,7 +150,7 @@
 
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light"><sup>2</sup>&radic;<span style="text-decoration:overline">x</span></button>
+                <button type="button" class="btn btn-light" id="sqrt" onclick="squareRoot()"><sup>2</sup>&radic;<span style="text-decoration:overline">x</span></button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" onclick="screen.innerHTML+='('">(</button>
@@ -168,7 +170,7 @@
         <!-- x suqare y  7 8 9 * -->
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light">x<sup>y</sup></button>
+                <button type="button" class="btn btn-light" id="powbtn" onclick="screen.innerHTML+='^'">x<sup>y</sup></button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" id="7" onclick="screen.innerHTML+=id"><b>7</b></button>
@@ -187,7 +189,7 @@
         <!-- 10 square x 4 5 6 - -->
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light">10<sup>x</sup></button>
+                <button type="button" class="btn btn-light" onclick="tenPower()">10<sup>x</sup></button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" id="4" onclick="screen.innerHTML+=id"><b>4</b></button>
@@ -208,7 +210,7 @@
 
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light" >log</button>
+                <button type="button" class="btn btn-light" onclick="log()">log</button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" id="1" onclick="screen.innerHTML+=id"><b>1</b></button>
@@ -228,16 +230,16 @@
 
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light">ln</button>
+                <button type="button" class="btn btn-light" onclick="ln()">ln</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">&#x207a;&#x2044;&#x208b;</button>
+                <button type="button" class="btn btn-light" onclick="plusMinus()">+/-</button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" id="0" onclick="screen.innerHTML+=id"><b>0</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">.</button>
+                <button type="button" class="btn btn-light" id="dotbtn" onclick="screen.innerHTML+='.'">.</button>
             </div>
             <div class="col" style="background-color: rgba(0, 153, 255, 0.966)">
                 <button type="button" class="btn" id="equalto" onclick=calculate()>=</button>
