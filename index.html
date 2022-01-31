@@ -24,12 +24,12 @@
 <body>
     
     <div class="container p-2 ">
-
+        
         <!-- Display -->
-        <div class="row" >
+        <div class="row">
             <div class="col">
                 <div class="outputContainer">
-                    <div type="text" class="text-end" name="screen" id="screen"> </div>
+                    <div type="text" class="text-end" name="screen" id="screen" style="font-size: 30px;" > </div>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
         <!-- DEG and F-E button -->
         <div class="row" >
             <div class="col">
-               <button type="button" class="btn btn-light" style="width: 100%;"><b>DEG</b></button>
+               <button type="button" class="btn btn-light" id="angleMode" onclick=angleToogle() value="DEG" style="width: 100%;" ><b>DEG</b></button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" style="width: 100%;"><b>F-E</b></button>
@@ -52,19 +52,19 @@
         <!-- MC MR M+ M- MS  -->
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light">MC</button>
+                <button type="button" class="btn btn-light disabled" id="mc" onclick= Memory.mmClear()>MC</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">MR</button>
+                <button type="button" class="btn btn-light disabled" id="mr" onclick= Memory.mmRecall()>MR</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>M+</b></button>
+                <button type="button" class="btn btn-light" id="m+" onclick= Memory.mmAdd()><b>M+</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>M-</b></button>
+                <button type="button" class="btn btn-light" id="m-" onclick= Memory.mmSub()><b>M-</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>MS</b></button>
+                <button type="button" class="btn btn-light" id="ms" onclick= Memory.mmStore()><b>MS</b></button>
             </div>
         </div>
 
@@ -73,31 +73,28 @@
         <div class="row">
             <!-- Trigonometry dropdown -->
             <div class="col">
-                <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown" onclick=dropdowntoogle(id) id="trig">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="Trigonometry" onclick="btn(event.target.value+'(')" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <img src="images/pngwing.png" width="20px" height="20px">Trigonometry
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <button class="dropdown-item">sin</a>
-                      <button class="dropdown-item">cos</button>
-                      <button class="dropdown-item">tan</button>
-                      <button class="dropdown-item">cot</button>
-                      <button class="dropdown-item">cosec</button>
-                      <button class="dropdown-item">sec</button>
+                    <div class="dropdown-menu" id="trig-menu" aria-labelledby="dropdownMenuButton" >
+                      <button class="dropdown-item" id="sin" onclick=onDropnBtnClick(id)>sin</a>
+                      <button class="dropdown-item" id="cos" onclick=onDropnBtnClick(id)>cos</button>
+                      <button class="dropdown-item" id="tan" onclick=onDropnBtnClick(id)>tan</button>
                     </div>
                 </div>
             </div>
 
             <!--function Dropdown  -->
             <div class="col">
-                <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown" onclick=dropdowntoogle(id) id="func">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="function" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         &#402; function
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <button class="dropdown-item" onclick="round()">Round</button>
-                      <button class="dropdown-item" onclick="ceil()">Ceil</button>
-                      <button class="dropdown-item" onclick="floor()">floor</button>
+                    <div class="dropdown-menu"  id="func-menu"aria-labelledby="dropdownMenuButton">
+                      <button class="dropdown-item" id="round" onclick=onDropnBtnClick(id)>Round</button>
+                      <button class="dropdown-item" id="ceil" onclick=ceil()>Ceil</button>
+                      <button class="dropdown-item" id="floor" onclick=onDropnBtnClick(id)>floor</button>
                     </div>
                 </div>
             </div>
@@ -105,6 +102,7 @@
         </div>
 
 
+    
         <!-- 2nd pi e C backspace -->
 
         <div class="row">
@@ -159,7 +157,7 @@
                 <button type="button" class="btn btn-light" onclick="screen.innerHTML+=')'">)</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">n!</button>
+                <button type="button" class="btn btn-light" id="factbtn" onclick="screen.innerHTML+='!'">n!</button>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-light" onclick="screen.innerHTML+='&div;'">&div;</button>
@@ -241,10 +239,11 @@
             <div class="col">
                 <button type="button" class="btn btn-light" id="dotbtn" onclick="screen.innerHTML+='.'">.</button>
             </div>
-            <div class="col" style="background-color: rgba(0, 153, 255, 0.966)">
+            <div class="col" style="background-color: rgba(162, 204, 232, 0.96)">
                 <button type="button" class="btn" id="equalto" onclick=calculate()>=</button>
             </div> 
         </div>
+
     </div>
 
     <script src="js/script.js"></script>
