@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col">
                 <div class="outputContainer">
-                    <div type="text" class="text-end" name="screen" id="screen" style="font-size: 30px;"> </div>
+                    <div type="text" class="text-end" name="screen" id="screen" style="font-size: 30px;" > </div>
                 </div>
             </div>
         </div>
@@ -52,19 +52,19 @@
         <!-- MC MR M+ M- MS  -->
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-light">MC</button>
+                <button type="button" class="btn btn-light disabled" id="mc" onclick= Memory.mmClear()>MC</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light">MR</button>
+                <button type="button" class="btn btn-light disabled" id="mr" onclick= Memory.mmRecall()>MR</button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>M+</b></button>
+                <button type="button" class="btn btn-light" id="m+" onclick= Memory.mmAdd()><b>M+</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>M-</b></button>
+                <button type="button" class="btn btn-light" id="m-" onclick= Memory.mmSub()><b>M-</b></button>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-light"><b>MS</b></button>
+                <button type="button" class="btn btn-light" id="ms" onclick= Memory.mmStore()><b>MS</b></button>
             </div>
         </div>
 

@@ -248,3 +248,55 @@ function fact(str){
     return oprand;             
 }
 
+// Memory funtion
+
+let Memory = (
+    function () {
+      let currentMemory = "0";
+      function mmStore() {
+        let expression = evaluate(screen.innerHTML);
+        if (eval(expression) != undefined) currentMemory = eval(expression);
+        else currentMemory = "0";
+        console.log("current memory stored as :" + currentMemory);
+        document.getElementById("mc").classList.remove("disabled");
+        document.getElementById("mr").classList.remove("disabled");
+      }
+  
+      function mmClear() {
+        currentMemory = "0";
+        console.log("current memory reset to 0:" + currentMemory);
+        document.getElementById("mc").classList.add("disabled");
+        document.getElementById("mr").classList.add("disabled");
+      }
+  
+      function mmRecall() {
+        screen.innerHTML = currentMemory;
+        console.log("Current Memory :" + currentMemory);
+      }
+  
+      function mmAdd() {
+        let expression = evaluate(screen.innerHTML);
+        let added = eval(expression);
+        currentMemory += added;
+        screen.innerHTML = currentMemory;
+        console.log(`${added} is added to current memory.`);
+        console.log("Current Memory :" + currentMemory);
+      }
+  
+      function mmSub() {
+        let expression = evaluate(screen.innerHTML);
+        let sub = eval(expression);
+        currentMemory -= sub;
+        screen.innerHTML = currentMemory;
+        console.log(`${sub} is subtracted from current memory.`);
+        console.log("Current Memory :" + currentMemory);
+      }
+      return {
+        mmStore,
+        mmAdd,
+        mmSub,
+        mmClear,
+        mmRecall,
+      };
+    }
+  )();
